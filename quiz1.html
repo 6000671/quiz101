@@ -24,11 +24,8 @@ un resultado según se orienta en la imagen adjunta.
 -->
 <script>
     
-function Lado base(width){
-    const value = prompt(`Enter value for the wit:`);
-}  
-function Altura(height)  {
-
+function vertices (lado,altura){
+    document.getElementById("vt").value= sum(aon, atn)
 }
 function byId(id) {
             return document.getElementById(id).value;
@@ -39,11 +36,13 @@ function byId(id) {
     const row =5;
     for (let j = 0; j < columns; j++) {
         const columns=3
-        const value = prompt(`Enter value for matrix[${i}][${j}]:`);
+        vert_ini = prompt(`Enter value for matrix[${i}][${j}]:`);
         row.push(parseFloat(value));
     }
     matrix.push(row);
+   
 }
+   return vert_ini;
 
  }
  function vertices posicion final(vert_end){
@@ -52,12 +51,13 @@ function byId(id) {
     const row =5;
     for (let j = 0; j < columns; j++) {
         const columns=3
-        const value = prompt(`Enter value for matrix[${i}][${j}]:`);
+        vert_end = prompt(`Enter value for matrix[${i}][${j}]:`);
         row.push(parseFloat(value));
     }
     matrix.push(row);
     
 }
+  return vert_end;
  }
 
  function sum(array1, array2)
@@ -68,13 +68,12 @@ function byId(id) {
         };
 function vector traslación(vt)
 {
- //Leer datos de vo 
 var arrs = arreglo.split(lim);
 arrn =[];
 arrs.forEach((elem) => {
 arrn.push(Number(elem))
-aon = strarr2num(byId("vert_ini"), ",")
-atn = strarr2num(byId("vert_end"), ",")
+aon = vertices posicion inicial(byId("vert_ini"), ",")
+atn = vertices posicion final(byId("vert_end"), ",")
 document.getElementById("vt").value= sum(aon, atn)
 });
 
