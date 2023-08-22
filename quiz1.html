@@ -25,7 +25,11 @@ un resultado según se orienta en la imagen adjunta.
 <script>
     
 function vertices (lado,altura){
-    document.getElementById("vt").value= sum(aon, atn)
+    return [{0,0,0}
+            {lado,0,0}
+            {0,lado,0}
+             {0,0,lado}
+            {lado/2,altura,lado/2}]
 }
 function byId(id) {
             return document.getElementById(id).value;
